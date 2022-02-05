@@ -21,8 +21,8 @@ public enum Site {
 
 	public static Site valueOf(Integer dbData) {
 		return Arrays.stream(values())
-				.filter(site -> site.getCode() == dbData)
-				.findFirst().orElse(null);
+			.filter(site -> site.getCode() == dbData)
+			.findFirst().orElse(null);
 	}
 
 	public static class SiteConverter implements AttributeConverter<Site, Integer> {

@@ -25,8 +25,8 @@ public enum Category {
 
 	public static Category valueOf(Integer dbData) {
 		return Arrays.stream(values())
-				.filter(category -> category.getCode() == dbData)
-				.findFirst().orElse(null);
+			.filter(category -> category.getCode() == dbData)
+			.findFirst().orElse(null);
 	}
 
 	public static class CategoryConverter implements AttributeConverter<Category, Integer> {

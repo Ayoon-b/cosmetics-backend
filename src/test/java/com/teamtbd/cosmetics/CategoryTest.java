@@ -12,6 +12,4 @@ class CategoryTest {
 		Category category = Category.valueOf(1);
 		assertEquals(category, Category.SKIN_LOTION);
 	}
-
-
 }
