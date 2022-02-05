@@ -2,10 +2,20 @@ package com.teamtbd.cosmetics.product;
 
 import com.teamtbd.cosmetics.domain.Category;
 import com.teamtbd.cosmetics.domain.Site;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.UUID;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.Reader;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+
 
 @Entity
 @Builder
