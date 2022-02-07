@@ -5,8 +5,12 @@ import com.teamtbd.cosmetics.domain.Site;
 import com.teamtbd.cosmetics.product.Product;
 import com.teamtbd.cosmetics.product.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
@@ -32,5 +36,15 @@ public class ProductService {
                 .ingredients(String.valueOf(jsonObject.get("ingredients")))
                 .caution(String.valueOf(jsonObject.get("caution")))
                 .build();
+    }
+
+    public List<Product> getProductsFromJsonArray(JSONArray jsonArray){
+        List<Product> productList = new ArrayList<>();
+
+        for(int i = 0; i<jsonArray.size(); i++){
+            productList.add(getProductFromJsonObject((JSONObject) jsonArray.get(i)));
+        }
+
+        return productList;
     }
 }
