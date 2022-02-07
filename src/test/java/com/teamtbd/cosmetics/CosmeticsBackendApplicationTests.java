@@ -14,10 +14,4 @@ class CosmeticsBackendApplicationTests {
 	void contextLoads() {
 	}
 
-	@Test
-	void getProductInfoTest() throws IOException, ParseException {
-		// "C:\\cosmeticData\\nunc_category_1_lotion.json"
-		Product product = new Product();
-		product.getProductInfo("C:/cosmeticData/nunc/nunc_category_1_lotion.json");
-	}
 }
