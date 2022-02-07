@@ -61,6 +61,8 @@ public class Product {
 
 	@Column
 	private String prodUsage;
+    @Column
+    private String volume;
 
 	@Column
 	private String caution;
