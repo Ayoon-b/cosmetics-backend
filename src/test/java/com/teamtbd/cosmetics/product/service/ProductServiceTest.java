@@ -9,6 +9,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.io.IOException;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -141,6 +142,13 @@ class ProductServiceTest {
                 "]");
 
         List<Product> products = productService.getProductsFromJsonArray(jsonArray);
-        System.out.println("products = " + products.toString());
+        System.out.println("products = " + products);
+    }
+
+    @Test
+    void JsonFileReadTest() throws IOException, ParseException {
+
+        //productService.JsonFileRead("C:/cosmeticData/oliveyoung/1/A000000002839.json");
+        productService.JsonFileRead("C:/cosmeticData/nunc/nunc_category_1_lotion.json");
     }
 }

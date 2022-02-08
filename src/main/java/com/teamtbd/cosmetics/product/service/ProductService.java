@@ -7,8 +7,13 @@ import com.teamtbd.cosmetics.product.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 import org.springframework.stereotype.Service;
 
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.Reader;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -46,5 +51,24 @@ public class ProductService {
         }
 
         return productList;
+    }
+
+    public void JsonFileRead(String dir) throws IOException, ParseException {
+        JSONParser parser = new JSONParser();
+        //String dataDir; 디렉토리랑 파일명 분리해서 받아올 예정
+        Reader reader = new FileReader(dir);
+        Object obj = parser.parse(reader);
+
+        if (obj instanceof JSONObject){
+            JSONObject jsonObject = (JSONObject) obj;
+            System.out.println(getProductFromJsonObject(jsonObject));
+
+        } else if (obj instanceof JSONArray){
+            JSONArray jsonArray = (JSONArray) obj;
+            System.out.println(getProductsFromJsonArray(jsonArray));
+
+        } else {
+            System.out.println("null 값");
+        }
     }
 }
