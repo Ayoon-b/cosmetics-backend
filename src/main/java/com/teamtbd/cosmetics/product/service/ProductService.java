@@ -30,7 +30,7 @@ public class ProductService {
         return Product.builder()
                 .id(String.valueOf(jsonObject.get("id")))
                 .name(String.valueOf(jsonObject.get("name")))
-                .price(Integer.parseInt(String.valueOf(jsonObject.get("price"))))
+                .price(Integer.parseInt(String.valueOf(jsonObject.get("price")).replace(",", "")))
                 .brand(String.valueOf(jsonObject.get("brand")))
                 .imageUrl(String.valueOf(jsonObject.get("image_url")))
                 .category(Category.valueOf(Integer.parseInt(String.valueOf(jsonObject.get("category")))))
