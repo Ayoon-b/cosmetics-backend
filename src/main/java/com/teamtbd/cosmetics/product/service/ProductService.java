@@ -11,11 +11,15 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
+import java.nio.file.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 @Service
 @RequiredArgsConstructor
@@ -52,23 +56,11 @@ public class ProductService {
 
         return productList;
     }
+    public List<Path> getFileList(String filePath) throws IOException {
+        Path path = Paths.get(filePath);
+        Stream<Path> paths = Files.walk(path);
+        List<Path> pathList = paths.filter(Files::isRegularFile).collect(Collectors.toList());
 
-    public void JsonFileRead(String dir) throws IOException, ParseException {
-        JSONParser parser = new JSONParser();
-        //String dataDir; 디렉토리랑 파일명 분리해서 받아올 예정
-        Reader reader = new FileReader(dir);
-        Object obj = parser.parse(reader);
-
-        if (obj instanceof JSONObject){
-            JSONObject jsonObject = (JSONObject) obj;
-            System.out.println(getProductFromJsonObject(jsonObject));
-
-        } else if (obj instanceof JSONArray){
-            JSONArray jsonArray = (JSONArray) obj;
-            System.out.println(getProductsFromJsonArray(jsonArray));
-
-        } else {
-            System.out.println("null 값");
-        }
+        return pathList;
     }
 }
