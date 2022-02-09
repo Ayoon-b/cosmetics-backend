@@ -56,6 +56,32 @@ public class ProductService {
 
         return productList;
     }
+
+    @Transactional
+    public void saveProductsFromPaths(List<Path> paths) throws IOException, ParseException {
+
+        for(int idx = 0; idx < paths.size(); idx++){
+            JSONParser parser = new JSONParser();
+            Reader reader = new FileReader(paths.get(idx).toString());
+            Object obj = parser.parse(reader);
+
+            if (obj instanceof JSONObject){
+                JSONObject jsonObject = (JSONObject) obj;
+                Product product = getProductFromJsonObject(jsonObject);
+                productRepository.save(product);
+
+            } else if (obj instanceof JSONArray){
+                JSONArray jsonArray = (JSONArray) obj;
+                List<Product> products = getProductsFromJsonArray(jsonArray);
+                productRepository.saveAll(products);
+
+            } else {
+                throw new IllegalArgumentException("JSON 형식이 아닙니다.");
+            }
+        }
+
+    }
+
     public List<Path> getFileList(String filePath) throws IOException {
         Path path = Paths.get(filePath);
         Stream<Path> paths = Files.walk(path);
