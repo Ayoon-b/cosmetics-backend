@@ -33,6 +33,7 @@ public class Product {
     private Category category;
 
     @Column
+    @Lob
     private String ingredients;
 
     @Column
@@ -48,22 +49,24 @@ public class Product {
     @Column
     private String siteCategoryId;
 
-    @Column
+    @Column(length = 512)
     private String link;
 
     @Column
     private String volume;
 
     @Column
+    @Lob
     private String prodUsage;
 
     @Column
+    @Lob
     private String caution;
 
     @Column
     private String expirationDate;
 
-    @Column
+    @Column(length = 512)
     private String imageUrl;
 
     @PrePersist
