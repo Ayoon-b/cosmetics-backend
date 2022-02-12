@@ -106,4 +106,8 @@ public class ProductService {
     public List<Product> getProductsByNameContains(String name, Pageable pageable){
         return productRepository.findByNameContains(name, pageable);
     }
+
+    public Page<Product> getProducts(PageRequest pageable) {
+        return productRepository.findAll(pageable);
+    }
 }
