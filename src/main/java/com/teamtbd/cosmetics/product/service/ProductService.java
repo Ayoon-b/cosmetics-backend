@@ -9,12 +9,13 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.Reader;
+import java.io.*;
 import java.nio.file.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -88,5 +89,11 @@ public class ProductService {
         List<Path> pathList = paths.filter(Files::isRegularFile).collect(Collectors.toList());
 
         return pathList;
+    }
+    public List<Product> getProductsByCategory(Category category){
+        return productRepository.findByCategory(category);
+    }
+    public List<Product> getProductsByCategory(Category category, Pageable pageable){
+        return productRepository.findByCategory(category, pageable);
     }
 }
