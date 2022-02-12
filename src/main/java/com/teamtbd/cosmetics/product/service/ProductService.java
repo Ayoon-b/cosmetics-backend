@@ -90,10 +90,20 @@ public class ProductService {
 
         return pathList;
     }
+    
     public List<Product> getProductsByCategory(Category category){
         return productRepository.findByCategory(category);
     }
+
+    public List<Product> getProductsByNameContains(String name){
+        return productRepository.findByNameContains(name);
+    }
+
     public List<Product> getProductsByCategory(Category category, Pageable pageable){
         return productRepository.findByCategory(category, pageable);
+    }
+
+    public List<Product> getProductsByNameContains(String name, Pageable pageable){
+        return productRepository.findByNameContains(name, pageable);
     }
 }
