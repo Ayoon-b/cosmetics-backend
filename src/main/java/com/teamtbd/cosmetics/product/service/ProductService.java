@@ -126,4 +126,8 @@ public class ProductService {
     public List<Product> getProductsByBrand(String brand){
         return productRepository.findByBrand(brand);
     }
+
+    public List<Product> getProductsByPrice(Integer startPrice, Integer lastPrice){
+        return productRepository.findByPrice(startPrice, lastPrice);
+    }
 }
