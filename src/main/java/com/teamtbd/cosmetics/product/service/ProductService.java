@@ -99,6 +99,9 @@ public class ProductService {
         return productRepository.findByNameContains(name);
     }
 
+    public List<Product> getProductsBySite(Site site){
+        return productRepository.findBySite(site);
+    }
     public List<Product> getProductsByCategory(Category category, Pageable pageable){
         return productRepository.findByCategory(category, pageable);
     }
@@ -107,6 +110,9 @@ public class ProductService {
         return productRepository.findByNameContains(name, pageable);
     }
 
+    public List<Product> getProductsBySite(Site site, Pageable pageable){
+        return productRepository.findBySite(site,pageable);
+    }
     public Page<Product> getProducts(PageRequest pageable) {
         return productRepository.findAll(pageable);
     }
