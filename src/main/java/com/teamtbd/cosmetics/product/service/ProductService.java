@@ -122,4 +122,8 @@ public class ProductService {
     public Page<Product> getProducts(PageRequest pageable) {
         return productRepository.findAll(pageable);
     }
+
+    public List<Product> getProductsByBrand(String brand){
+        return productRepository.findByBrand(brand);
+    }
 }
