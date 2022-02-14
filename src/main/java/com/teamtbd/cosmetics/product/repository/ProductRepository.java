@@ -23,4 +23,5 @@ public interface ProductRepository extends JpaRepository<Product, String> {
     @Query("select DISTINCT(p.brand) FROM Product p")
     List<String> getAllBrand();
 
+    List<Product> findByBrand(String brand);
 }
