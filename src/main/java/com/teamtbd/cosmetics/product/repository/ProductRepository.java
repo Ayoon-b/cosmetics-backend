@@ -24,4 +24,8 @@ public interface ProductRepository extends JpaRepository<Product, String> {
     List<String> getAllBrand();
 
     List<Product> findByBrand(String brand);
+
+    @Query("SELECT p FROM Product p WHERE price BETWEEN '?0' AND '?1'")
+    List<Product> findByPrice(Integer startPrice, Integer lastPrice);
+
 }
