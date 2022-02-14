@@ -20,4 +20,7 @@ public interface ProductRepository extends JpaRepository<Product, String> {
     List<Product> findBySite(Site site);
     List<Product> findBySite(Site site, Pageable pageable);
 
+    @Query("select DISTINCT(p.brand) FROM Product p")
+    List<String> getAllBrand();
+
 }

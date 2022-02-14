@@ -102,6 +102,7 @@ public class ProductService {
     public List<Product> getProductsBySite(Site site){
         return productRepository.findBySite(site);
     }
+
     public List<Product> getProductsByCategory(Category category, Pageable pageable){
         return productRepository.findByCategory(category, pageable);
     }
@@ -113,6 +114,11 @@ public class ProductService {
     public List<Product> getProductsBySite(Site site, Pageable pageable){
         return productRepository.findBySite(site,pageable);
     }
+
+    public List<String> getAllBrand(){
+        return productRepository.getAllBrand();
+    }
+
     public Page<Product> getProducts(PageRequest pageable) {
         return productRepository.findAll(pageable);
     }
