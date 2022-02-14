@@ -27,4 +27,24 @@ public class MemberController {
 
         return member.get(); //json타입으로 정보반환
     }
+
+    //회원정보수정
+    @PutMapping("/find")
+    public Optional<Member> updateUser(@RequestParam Long id,@RequestBody Member member){
+        Optional<Member> updateUser = memberRepository.findById(id);
+
+        //바꿀수없는것 id,join date
+        updateUser.ifPresent(selectUser->{
+            selectUser.setUser_name(member.getUser_name());
+            selectUser.setNickname(member.getNickname());
+            selectUser.setBirth(member.getBirth());
+            selectUser.setEmail(member.getEmail());
+            selectUser.setGender(member.getGender());
+            selectUser.setSkin_type(member.getSkin_type());
+            selectUser.setPhonenumber(member.getPhonenumber());
+
+            memberRepository.save(selectUser);
+        });
+        return updateUser;
+    }
 }
