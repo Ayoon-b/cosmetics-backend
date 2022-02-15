@@ -3,6 +3,7 @@ package com.teamtbd.cosmetics.product.repository;
 import com.teamtbd.cosmetics.domain.Category;
 import com.teamtbd.cosmetics.domain.Site;
 import com.teamtbd.cosmetics.product.Product;
+import com.teamtbd.cosmetics.repository.ProductRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
@@ -15,7 +16,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class ProductRepositoryTest {
 
 	@Autowired
-	ProductRepository productRepository;
+    ProductRepository productRepository;
 
 	@Test
 	void saveTest() {
