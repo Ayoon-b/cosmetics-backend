@@ -21,13 +21,20 @@ public class MemberService {
         Optional<Member> updateUser = memberRepository.findById(id);
         //바꿀수없는것 id,join date
         updateUser.ifPresent(selectUser->{
-            selectUser.setUserName(member.getUserName());
-            selectUser.setNickName(member.getNickName());
-            selectUser.setBirth(member.getBirth());
-            selectUser.setEmail(member.getEmail());
-            selectUser.setGender(member.getGender());
-            selectUser.setSkinType(member.getSkinType());
-            selectUser.setPhoneNumber(member.getPhoneNumber());
+            if(member.getUserName()!=null)
+                selectUser.setUserName(member.getUserName());
+            if(member.getNickName()!=null)
+                selectUser.setNickName(member.getNickName());
+            if(member.getBirth()!=null)
+                selectUser.setBirth(member.getBirth());
+            if(member.getEmail()!=null)
+                selectUser.setEmail(member.getEmail());
+            if(member.getGender()!=null)
+                selectUser.setGender(member.getGender());
+            if(member.getSkinType()!=null)
+                selectUser.setSkinType(member.getSkinType());
+            if(member.getPhoneNumber()!=null)
+                selectUser.setPhoneNumber(member.getPhoneNumber());
 
             memberRepository.save(selectUser);
         });
