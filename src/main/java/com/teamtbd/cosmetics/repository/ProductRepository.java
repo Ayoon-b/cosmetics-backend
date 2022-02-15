@@ -1,4 +1,4 @@
-package com.teamtbd.cosmetics.product.repository;
+package com.teamtbd.cosmetics.repository;
 
 import com.teamtbd.cosmetics.product.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
