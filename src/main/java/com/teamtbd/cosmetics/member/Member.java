@@ -20,16 +20,16 @@ public class Member {
     private Long id;
 
     @Column
-    private String user_name;
+    private String userName;
 
     @Column
-    private String nickname;
+    private String nickName;
 
     @Column
     private String email;
 
     @Column
-    private String phonenumber;
+    private String phoneNumber;
 
     @Column
     private String gender;
@@ -38,9 +38,9 @@ public class Member {
     private String birth;
 
     @Column
-    private String skin_type;
+    private String skinType;
 
     @Column
-    private String join_date;
+    private String joinDate;
 
 }
