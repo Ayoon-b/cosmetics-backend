@@ -3,22 +3,29 @@ package com.teamtbd.cosmetics.member.controller;
 
 import com.teamtbd.cosmetics.member.Member;
 import com.teamtbd.cosmetics.member.repository.MemberRepository;
+import com.teamtbd.cosmetics.member.service.MemberService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 
 @RestController
+@RequiredArgsConstructor
 @RequestMapping(value = "/", method = {RequestMethod.GET})
 public class MemberController {
 
-    @Autowired
+    private final MemberService memberService;
+
+    @Autowired //controller에서 리포지토리에 직접 접근하는 것은 안좋음. 임시 회원가입에만 사용하기
     MemberRepository memberRepository;
 
-    @PostMapping("/join") //api tester 에서 임시 회원가입 test하기위한 코드
+
+    @PostMapping("/member") //api tester 에서 임시 회원가입 test하기위한 코드
+    //Restful 한 url 를 짜기위해서 url에는 리소스를 나타내는 것이 좋음 "회원"등록이므로 url에 회원을 넣자
     public String join(@RequestBody Member member){
         Member member1 = memberRepository.save(member);
-        return member.getUser_name()+"님 안녕하세요.";
+        return member.getUserName()+"님 안녕하세요.";
     }
 
     @GetMapping("/find")
@@ -28,23 +35,10 @@ public class MemberController {
         return member.get(); //json타입으로 정보반환
     }
 
+    ///////////여기부터 main기능
     //회원정보수정
-    @PutMapping("/find")
+    @PutMapping("/memberInfo")
     public Optional<Member> updateUser(@RequestParam Long id,@RequestBody Member member){
-        Optional<Member> updateUser = memberRepository.findById(id);
-
-        //바꿀수없는것 id,join date
-        updateUser.ifPresent(selectUser->{
-            selectUser.setUser_name(member.getUser_name());
-            selectUser.setNickname(member.getNickname());
-            selectUser.setBirth(member.getBirth());
-            selectUser.setEmail(member.getEmail());
-            selectUser.setGender(member.getGender());
-            selectUser.setSkin_type(member.getSkin_type());
-            selectUser.setPhonenumber(member.getPhonenumber());
-
-            memberRepository.save(selectUser);
-        });
-        return updateUser;
+        return memberService.updateUser(id,member);
     }
 }
