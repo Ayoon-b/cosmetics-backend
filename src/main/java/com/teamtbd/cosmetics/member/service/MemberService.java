@@ -34,4 +34,15 @@ public class MemberService {
         return updateUser;
     }
 
+    //회원탈퇴
+    public Member deleteUser(Long id, Member member){
+        Optional<Member> updateUser = memberRepository.findById(id);
+
+        updateUser.ifPresent(selectUser->{
+
+            memberRepository.delete(selectUser);
+        });
+        return updateUser.get();
+    }
+
 }
