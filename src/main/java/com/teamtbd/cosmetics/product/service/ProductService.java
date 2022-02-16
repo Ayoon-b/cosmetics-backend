@@ -12,6 +12,7 @@ import org.json.simple.parser.ParseException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -127,7 +128,24 @@ public class ProductService {
         return productRepository.findByBrand(brand);
     }
 
-    public List<Product> getProductsByPrice(Integer startPrice, Integer lastPrice){
-        return productRepository.findByPrice(startPrice, lastPrice);
+    public List<Product> getProductsByPriceRange(Integer minPrice, Integer maxPrice){
+        return productRepository.findByPriceBetween(minPrice, maxPrice);
     }
+
+    public List<Product> getProductsByIngredientsContains(String ingredients) {
+        return productRepository.findByIngredientsContains(ingredients);
+    }
+
+    public Page<Product> getProductsByPriceAsc() {
+        return productRepository.findAll(PageRequest.of(0, 24, Sort.by("price")));
+    }
+
+    public Page<Product> getProductsByPriceDesc() {
+        return productRepository.findAll(PageRequest.of(0, 24, Sort.by("price").descending()));
+    }
+
+    public Page<Product> getProductsByCategoryAndName(Category category, String name, Pageable pageable) {
+        return productRepository.findByCategoryAndNameContains(category, name, pageable);
+    }
+
 }

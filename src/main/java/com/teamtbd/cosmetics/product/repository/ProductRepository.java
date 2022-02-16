@@ -28,5 +28,6 @@ public interface ProductRepository extends JpaRepository<Product, String> {
 
     @Query("SELECT p FROM Product p WHERE price BETWEEN '?0' AND '?1'")
     List<Product> findByPrice(Integer startPrice, Integer lastPrice);
+    List<Product> findByPriceBetween(Integer minPrice, Integer maxPrice);
 
 }
