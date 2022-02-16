@@ -104,11 +104,11 @@ public class ProductService {
         return productRepository.findBySite(site);
     }
 
-    public List<Product> getProductsByCategory(Category category, Pageable pageable){
+    public Page<Product> getProductsByCategory(Category category, Pageable pageable){
         return productRepository.findByCategory(category, pageable);
     }
 
-    public List<Product> getProductsByNameContains(String name, Pageable pageable){
+    public Page<Product> getProductsByNameContains(String name, Pageable pageable){
         return productRepository.findByNameContains(name, pageable);
     }
 
