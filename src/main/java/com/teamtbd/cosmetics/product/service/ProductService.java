@@ -131,11 +131,9 @@ public class ProductService {
     public List<Product> getProductsByPriceRange(Integer minPrice, Integer maxPrice){
         return productRepository.findByPriceBetween(minPrice, maxPrice);
     }
-
     public List<Product> getProductsByIngredientsContains(String ingredients) {
         return productRepository.findByIngredientsContains(ingredients);
     }
-
     public Page<Product> getProductsByPriceAsc() {
         return productRepository.findAll(PageRequest.of(0, 24, Sort.by("price")));
     }
