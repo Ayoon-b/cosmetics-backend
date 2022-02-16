@@ -115,8 +115,8 @@ public class ProductService {
         return productRepository.findBySite(site,pageable);
     }
 
-    public List<String> getAllBrand(){
-        return productRepository.getAllBrand();
+    public List<String> getAllBrands(){
+        return productRepository.findAllBrands();
     }
 
     public Page<Product> getProducts(PageRequest pageable) {
