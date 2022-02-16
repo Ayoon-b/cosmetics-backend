@@ -16,7 +16,7 @@ public interface ProductRepository extends JpaRepository<Product, String> {
     Page<Product> findByCategory(Category category, Pageable pageable);
 
     List<Product> findByNameContains(String name);
-    List<Product> findByNameContains(String name, Pageable pageable);
+    Page<Product> findByNameContains(String name, Pageable pageable);
 
     List<Product> findBySite(Site site);
     List<Product> findBySite(Site site, Pageable pageable);
