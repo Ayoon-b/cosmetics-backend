@@ -4,8 +4,14 @@ spring:
     url: jdbc:mysql://localhost:3306/cosmetics?serverTimezone=Asia/Seoul
     username: root
     password: 1234
+
+  devtools:
+    remote:
+      restart:
+        enabled: true
   jpa:
     hibernate:
       ddl-auto: create
 hibernate:
   globally_quoted_identifiers: true
+
