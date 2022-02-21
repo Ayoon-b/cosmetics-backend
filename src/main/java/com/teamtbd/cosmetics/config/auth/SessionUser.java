@@ -1,16 +1,19 @@
 package com.teamtbd.cosmetics.config.auth;
 
-import com.teamtbd.cosmetics.domain.User;
+import com.teamtbd.cosmetics.member.Member;
 import lombok.Getter;
 
 import java.io.Serializable;
 
 @Getter
 public class SessionUser implements Serializable {
-    private String name, email, picture;
-    public SessionUser(User user) {
-        this.name = user.getName();
-        this.email = user.getEmail();
-        this.picture = user.getPicture();
-    }
+	private final String name;
+	private final String email;
+	private final String picture;
+
+	public SessionUser(Member member) {
+		this.name = member.getUserName();
+		this.email = member.getEmail();
+		this.picture = member.getPicture();
+	}
 }

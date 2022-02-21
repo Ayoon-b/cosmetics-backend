@@ -10,7 +10,7 @@ import java.util.Arrays;
 @Getter
 public enum Category {
 	SKIN_LOTION(1, "스킨/로션"),
-	ESSENCE(2, "에센스"), //
+	ESSENCE(2, "에센스"),
 	CREAM(3, "크림"),
 	CLEANSING_FOAM(4, "클렌징폼"),
 	SUNSCREEN(5, "썬크림"),

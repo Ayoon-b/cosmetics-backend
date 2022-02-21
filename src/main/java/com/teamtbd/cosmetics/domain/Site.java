@@ -10,11 +10,10 @@ import java.util.Arrays;
 @Getter
 public enum Site {
 	OLIVEYOUNG(1, "올리브영"),
-	THEFACESHOP(2, "더페이스샵"),
-	INNISFREE(3, "이니스프리"),
-	SKINFOOD(4, "스킨푸드"),
-	NUNC(5, "눙크"),
-	NATURE_REPUBLIC(6, "네이처리퍼블릭");
+	INNISFREE(2, "이니스프리"),
+	SKINFOOD(3, "스킨푸드"),
+	NUNC(4, "눙크"),
+	NATURE_REPUBLIC(5, "네이처리퍼블릭");
 
 	private final int code;
 	private final String value;

@@ -1,18 +1,39 @@
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/cosmetics?serverTimezone=Asia/Seoul
     username: root
     password: 1234
-
   devtools:
+    livereload:
+      enabled: true
     remote:
       restart:
         enabled: true
   jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     hibernate:
-      ddl-auto: update
-hibernate:
-  globally_quoted_identifiers: true
-
-
+      ddl-auto: create
+    properties:
+      hibernate:
+        globally_quoted_identifiers: true
+    show-sql: true
+  main:
+    allow-circular-references: true
+  profiles:
+    include: oauth
+  thymeleaf:
+    cache: false
+    check-template-location: true
+    enabled: true
+    prefix: classpath:/templates/
+    suffix: .html

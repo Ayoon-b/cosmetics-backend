@@ -2,19 +2,10 @@ package com.teamtbd.cosmetics.product;
 
 import com.teamtbd.cosmetics.domain.Category;
 import com.teamtbd.cosmetics.domain.Site;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.UUID;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.Reader;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
 
 
 @Entity
@@ -25,63 +16,63 @@ import org.json.simple.parser.ParseException;
 @Getter
 public class Product {
 
-    @Id
-    private String id;
+	@Id
+	private String id;
 
-    @Column(nullable = false)
-    private String name;
+	@Column(nullable = false)
+	private String name;
 
-    @Column
-    private int price;
+	@Column
+	private int price;
 
-    @Column
-    private String brand;
+	@Column
+	private String brand;
 
-    @Column
-    @Convert(converter = Category.CategoryConverter.class)
-    private Category category;
+	@Column
+	@Convert(converter = Category.CategoryConverter.class)
+	private Category category;
 
-    @Column
-    @Lob
-    private String ingredients;
+	@Column
+	@Lob
+	private String ingredients;
 
-    @Column
-    private String origin;
+	@Column
+	private String origin;
 
-    @Column
-    @Convert(converter = Site.SiteConverter.class)
-    private Site site;
+	@Column
+	@Convert(converter = Site.SiteConverter.class)
+	private Site site;
 
-    @Column
-    private String siteProductId;
+	@Column
+	private String siteProductId;
 
-    @Column
-    private String siteCategoryId;
+	@Column
+	private String siteCategoryId;
 
-    @Column(length = 512)
-    private String link;
+	@Column(length = 512)
+	private String link;
 
-    @Column
-    private String volume;
+	@Column
+	private String volume;
 
-    @Column
-    @Lob
-    private String prodUsage;
+	@Column
+	@Lob
+	private String prodUsage;
 
-    @Column
-    @Lob
-    private String caution;
+	@Column
+	@Lob
+	private String caution;
 
-    @Column
-    private String expirationDate;
+	@Column
+	private String expirationDate;
 
-    @Column(length = 512)
-    private String imageUrl;
+	@Column(length = 512)
+	private String imageUrl;
 
-    @PrePersist
-    public void prePersist() {
-        if (id == null) {
-            id = UUID.randomUUID().toString();
-        }
-    }
+	@PrePersist
+	public void prePersist() {
+		if (id == null) {
+			id = UUID.randomUUID().toString();
+		}
+	}
 }
