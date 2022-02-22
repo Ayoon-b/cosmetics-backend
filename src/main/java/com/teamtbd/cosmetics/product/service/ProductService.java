@@ -36,7 +36,9 @@ public class ProductService {
                 .brand(String.valueOf(jsonObject.get("brand")))
                 .imageUrl(String.valueOf(jsonObject.get("image_url")))
                 .category(Category.valueOf(Integer.parseInt(String.valueOf(jsonObject.get("category")))))
-                .site(Site.valueOf(Integer.parseInt(String.valueOf(jsonObject.get("site")))))
+                .site(Site.valueOf( Integer.parseInt(String.valueOf(jsonObject.get("site"))) > 2
+                        ? Integer.parseInt(String.valueOf(jsonObject.get("site")))-1
+                        : Integer.parseInt(String.valueOf(jsonObject.get("site")))))
                 .siteProductId(String.valueOf(jsonObject.get("site_id")))
                 .link(String.valueOf(jsonObject.get("link")))
                 .siteCategoryId(String.valueOf(jsonObject.get("site_category")))
