@@ -3,10 +3,12 @@ package com.teamtbd.cosmetics.product.repository;
 import com.teamtbd.cosmetics.domain.Category;
 import com.teamtbd.cosmetics.domain.Site;
 import com.teamtbd.cosmetics.product.Product;
+import com.teamtbd.cosmetics.product.service.ProductService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.test.annotation.Rollback;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;
@@ -19,8 +21,11 @@ class ProductRepositoryTest {
 	ProductRepository productRepository;
 
 	@Test
-	void saveTest() {
+	@Rollback(value = false)
+	void saveTest() throws Throwable{
+
 		Product product = Product.builder()
+			.id("aaaaa")
 			.name("test")
 			.caution("test")
 			.brand("test")
@@ -35,12 +40,13 @@ class ProductRepositoryTest {
 			.siteCategoryId("test")
 			.site(Site.NUNC)
 			.prodUsage("test")
-			.caution("test")
+			.volume("1000")
 			.build();
 
-		assertNull(product.getId());
 		product = productRepository.save(product);
 
 		assertNotNull(product.getId());
+
 	}
+
 }
