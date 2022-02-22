@@ -26,32 +26,38 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	public void configure(HttpSecurity httpSecurity) throws Exception {
-		httpSecurity.authorizeRequests()
-			.antMatchers("/", "/oauth2/**", "/login/**", "/css/**",
-				"/images/**", "/js/**", "/console/**", "/favicon.ico/**")
-			.permitAll()
-			.antMatchers("/products/**")
-			.permitAll()
-			.antMatchers("/facebook")
-			.hasAuthority(FACEBOOK.getRoleType())
-			.antMatchers("/google")
-			.hasAuthority(GOOGLE.getRoleType())
-			.antMatchers("/kakao")
-			.hasAuthority(KAKAO.getRoleType())
-			.antMatchers("/naver")
-			.hasAuthority(NAVER.getRoleType())
-			.anyRequest().authenticated()
-
-			.and()
-			.oauth2Login()
-			.userInfoEndpoint().userService(new CustomOAuth2UserService()) // 네이버 USER INFO의 응답을 처리하기 위한 설정
-
-			.and()
-			.defaultSuccessUrl("/loginSuccess")
-			.failureUrl("/loginFailure")
-			.and()
-			.exceptionHandling()
-			.authenticationEntryPoint(new LoginUrlAuthenticationEntryPoint("/login"));
+		httpSecurity
+			.authorizeRequests()
+			.anyRequest().permitAll();
+//			.antMatchers("/", "/oauth2/**", "/login/**", "/css/**",
+//				"/images/**", "/js/**", "/console/**", "/favicon.ico/**")
+//			.permitAll()
+//			.antMatchers("/products", "/products/**")
+//			.permitAll()
+//			.and()
+//
+//			.authorizeRequests()
+//			.antMatchers("/facebook")
+//			.hasAuthority(FACEBOOK.getRoleType())
+//			.antMatchers("/google")
+//			.hasAuthority(GOOGLE.getRoleType())
+//			.antMatchers("/kakao")
+//			.hasAuthority(KAKAO.getRoleType())
+//			.antMatchers("/naver")
+//			.hasAuthority(NAVER.getRoleType())
+//			.anyRequest()
+//			.authenticated()
+//
+//			.and()
+//			.oauth2Login()
+//			.userInfoEndpoint().userService(new CustomOAuth2UserService()) // 네이버 USER INFO의 응답을 처리하기 위한 설정
+//
+//			.and()
+//			.defaultSuccessUrl("/loginSuccess")
+//			.failureUrl("/loginFailure")
+//			.and()
+//			.exceptionHandling()
+//			.authenticationEntryPoint(new LoginUrlAuthenticationEntryPoint("/login"));
 	}
 
 	@Autowired
