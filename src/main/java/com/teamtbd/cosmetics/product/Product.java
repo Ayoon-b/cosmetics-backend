@@ -69,6 +69,12 @@ public class Product {
 	@Column(length = 512)
 	private String imageUrl;
 
+	@Column
+	private int reviewCount;
+
+	@Column
+	private float rating;
+
 	@PrePersist
 	public void prePersist() {
 		if (id == null) {
