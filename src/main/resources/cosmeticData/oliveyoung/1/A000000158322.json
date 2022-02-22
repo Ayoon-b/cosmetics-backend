@@ -1,18 +1,1 @@
-{
-  "id": "10c0361b-cabe-4b1b-a924-b196cb0380d7",
-  "name": "원씽 나이아신아마이드 10%(온)",
-  "price": "8800",
-  "brand": "원씽",
-  "category": "1",
-  "site": 1,
-  "site_id": "A000000158322",
-  "site_category": "100000100010008",
-  "link": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000158322&dispCatNo=100000100010008&trackingCd&curation&egcode&rccode&egrankcode",
-  "image_url": "https://image.oliveyoung.co.kr/uploads/images/goods/400/10/0000/0015/A00000015832201ko.jpg?l=ko",
-  "volume": "150ml",
-  "expiration_date": "제조일로부터 24개월, 개봉 후 6개월 ",
-  "usage": "스킨 단독사용 : 스킨케어 첫 단계로 화장솜에 추출물을 적셔 피부결을 정돈하거나 미스트 용기에 넣어 수시로 뿌려주세요. 크림 배합사용 : 사용하던 화장품에 5~10% 비율로 배합하여 사용해주세요. 사용감, 발림성, 제형 등을 체크하면서 첨가량을 조절하시면 됩니다. 나이아신아마이드 팩 : 화장솜이나 패드에 추출물을 적셔 집중케어가 필요한 부분에 10분간 팩처럼 붙여주세요.(고함량 성분이므로 팩 사용 전 패치 테스트를 권장합니다.)",
-  "origin": "대한민국",
-  "ingredients": "나이아신아마이드, 부틸렌글라이콜, 1,2-헥산다이올, 에틸헥실글리세린, 정제수",
-  "caution": "상세페이지 참조"
-}
+{"image_url":"https://image.oliveyoung.co.kr/uploads/images/goods/400/10/0000/0015/A00000015832201ko.jpg?l=ko","usage":"스킨 단독사용 : 스킨케어 첫 단계로 화장솜에 추출물을 적셔 피부결을 정돈하거나 미스트 용기에 넣어 수시로 뿌려주세요. 크림 배합사용 : 사용하던 화장품에 5~10% 비율로 배합하여 사용해주세요. 사용감, 발림성, 제형 등을 체크하면서 첨가량을 조절하시면 됩니다. 나이아신아마이드 팩 : 화장솜이나 패드에 추출물을 적셔 집중케어가 필요한 부분에 10분간 팩처럼 붙여주세요.(고함량 성분이므로 팩 사용 전 패치 테스트를 권장합니다.)","origin":"대한민국","link":"https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000158322&dispCatNo=100000100010008&trackingCd&curation&egcode&rccode&egrankcode","expiration_date":"제조일로부터 24개월, 개봉 후 6개월 ","site_category":"100000100010008","volume":"150ml","site":1,"price":"8800","name":"원씽 나이아신아마이드 10%(온)","site_id":"A000000158322","ingredients":"나이아신아마이드, 부틸렌글라이콜, 1,2-헥산다이올, 에틸헥실글리세린, 정제수","id":"10c0361b-cabe-4b1b-a924-b196cb0380d7","category":"1","brand":"원씽","caution":"상세페이지 참조"}

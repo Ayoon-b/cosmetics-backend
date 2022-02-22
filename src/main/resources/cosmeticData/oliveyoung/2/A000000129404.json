@@ -1,18 +1,1 @@
-{
-  "id": "f98ef9aa-5222-4df4-ad96-9e742340ccda",
-  "name": "더포션스 Q10 앰플",
-  "price": "9400",
-  "brand": "더포션스",
-  "category": "2",
-  "site": 1,
-  "site_id": "A000000129404",
-  "site_category": "1000001000100090001",
-  "link": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000129404&dispCatNo=1000001000100090001&trackingCd&curation&egcode&rccode&egrankcode",
-  "image_url": "https://image.oliveyoung.co.kr/uploads/images/goods/400/10/0000/0012/A00000012940401ko.jpg?l=ko",
-  "volume": "20ml",
-  "expiration_date": "제조일로부터 3년 이내",
-  "usage": "적당량을 피부에 취해 흡수시켜 주세요.  두 가지 이상의 앰플을 함께 사용하시거나, 기존 사용하던 스킨케어 제품과 함께 사용 가능합니다.",
-  "origin": "대한민국",
-  "ingredients": "정제수,부틸렌글라이콜,펜틸렌글라이콜,유비퀴논(2.1%),아르간오일,솔비탄올리베이트,데하이드로잔탄검",
-  "caution": "1) 화장품 사용 시 또는 사용 후 직사광선에 의하여 사용부위가 붉은 반점, 부어오름 또는 가려움증 등의 이상 증상이나 부작용이 있는 경우 전문의 등과 상담할 것2) 상처가 있는 부위 등에는 사용을 자제할 것3) 보관 및 취급 시의 주의사항가) 어린이의 손이 닿지 않는 곳에 보관할 것나) 직사광선을 피해서 보관할 것"
-}
+{"image_url":"https://image.oliveyoung.co.kr/uploads/images/goods/400/10/0000/0012/A00000012940401ko.jpg?l=ko","usage":"적당량을 피부에 취해 흡수시켜 주세요.  두 가지 이상의 앰플을 함께 사용하시거나, 기존 사용하던 스킨케어 제품과 함께 사용 가능합니다.","origin":"대한민국","link":"https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000129404&dispCatNo=1000001000100090001&trackingCd&curation&egcode&rccode&egrankcode","expiration_date":"제조일로부터 3년 이내","site_category":"1000001000100090001","volume":"20ml","site":1,"price":"9400","name":"더포션스 Q10 앰플","site_id":"A000000129404","ingredients":"정제수,부틸렌글라이콜,펜틸렌글라이콜,유비퀴논(2.1%),아르간오일,솔비탄올리베이트,데하이드로잔탄검","id":"f98ef9aa-5222-4df4-ad96-9e742340ccda","category":"2","brand":"더포션스","caution":"1) 화장품 사용 시 또는 사용 후 직사광선에 의하여 사용부위가 붉은 반점, 부어오름 또는 가려움증 등의 이상 증상이나 부작용이 있는 경우 전문의 등과 상담할 것2) 상처가 있는 부위 등에는 사용을 자제할 것3) 보관 및 취급 시의 주의사항가) 어린이의 손이 닿지 않는 곳에 보관할 것나) 직사광선을 피해서 보관할 것"}

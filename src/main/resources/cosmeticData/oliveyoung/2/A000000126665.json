@@ -1,18 +1,1 @@
-{
-  "id": "8c883eba-4532-48d7-95df-38f1acbb2459",
-  "name": "유세린 더모퓨리파이어 수퍼세럼 30ml",
-  "price": "29000",
-  "brand": "유세린",
-  "category": "2",
-  "site": 1,
-  "site_id": "A000000126665",
-  "site_category": "1000001000100090001",
-  "link": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000126665&dispCatNo=1000001000100090001&trackingCd&curation&egcode&rccode&egrankcode",
-  "image_url": "https://image.oliveyoung.co.kr/uploads/images/goods/400/10/0000/0012/A00000012666508ko.jpg?l=ko",
-  "volume": "30ml",
-  "expiration_date": "주문일로부터 1년 6개월 이내의 제조 상품 배송, 제조일로부터 30개월 이내 사용(상품에는 '제품 사용 기한' 표기)",
-  "usage": "매일 아침 저녁, 토너 사용 후 적당량을 펌핑하여 얼굴에 골고루 펴 발라줍니다.",
-  "origin": "폴란드",
-  "ingredients": "정제수, 사이클로메티콘, 글리세린, 타피오카전분, 메틸프로판다이올, 락틱애씨드, 다이메티콘올, 잔탄검, 소듐하이드록사이드, 데실렌글라이콜, 향료, 소듐스테아로일글루타메이트, 소듐클로라이드",
-  "caution": "1) 화장품 사용 시 또는 사용 후 직사광선에 의하여 사용부위가 붉은 반점, 부어오름 또는 가려움증 등의 이상 증상이나 부작용이 있는 경우 전문의 등과 상담할 것 2) 상처가 있는 부위 등에는 사용을 자제할 것 3) 보관 및 취급 시의 주의사항 가) 어린이의 손이 닿지 않는 곳에 보관할 것 나) 직사광선을 피해서 보관할 것"
-}
+{"image_url":"https://image.oliveyoung.co.kr/uploads/images/goods/400/10/0000/0012/A00000012666508ko.jpg?l=ko","usage":"매일 아침 저녁, 토너 사용 후 적당량을 펌핑하여 얼굴에 골고루 펴 발라줍니다.","origin":"폴란드","link":"https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000126665&dispCatNo=1000001000100090001&trackingCd&curation&egcode&rccode&egrankcode","expiration_date":"주문일로부터 1년 6개월 이내의 제조 상품 배송, 제조일로부터 30개월 이내 사용(상품에는 '제품 사용 기한' 표기)","site_category":"1000001000100090001","volume":"30ml","site":1,"price":"29000","name":"유세린 더모퓨리파이어 수퍼세럼 30ml","site_id":"A000000126665","ingredients":"정제수, 사이클로메티콘, 글리세린, 타피오카전분, 메틸프로판다이올, 락틱애씨드, 다이메티콘올, 잔탄검, 소듐하이드록사이드, 데실렌글라이콜, 향료, 소듐스테아로일글루타메이트, 소듐클로라이드","id":"8c883eba-4532-48d7-95df-38f1acbb2459","category":"2","brand":"유세린","caution":"1) 화장품 사용 시 또는 사용 후 직사광선에 의하여 사용부위가 붉은 반점, 부어오름 또는 가려움증 등의 이상 증상이나 부작용이 있는 경우 전문의 등과 상담할 것 2) 상처가 있는 부위 등에는 사용을 자제할 것 3) 보관 및 취급 시의 주의사항 가) 어린이의 손이 닿지 않는 곳에 보관할 것 나) 직사광선을 피해서 보관할 것"}

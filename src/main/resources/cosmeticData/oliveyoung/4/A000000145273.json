@@ -1,18 +1,1 @@
-{
-  "id": "f5250a8c-bfe0-49e0-8798-77ea4186bdaf",
-  "name": "닥터디퍼런트 퍼스트클렌저 200ml",
-  "price": "23000",
-  "brand": "닥터디퍼런트",
-  "category": "4",
-  "site": 1,
-  "site_id": "A000000145273",
-  "site_category": "1000001001000010001",
-  "link": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000145273&dispCatNo=1000001001000010001&trackingCd&curation&egcode&rccode&egrankcode",
-  "image_url": "https://image.oliveyoung.co.kr/uploads/images/goods/400/10/0000/0014/A00000014527303ko.jpg?l=ko",
-  "volume": "200ml",
-  "expiration_date": "개봉 전 30개월, 개봉 후 12개월",
-  "usage": "물기 없는 손으로 적당량을 덜어 메이크업 등을 지운 뒤 물로 헹구어 줍니다.",
-  "origin": "대한민국",
-  "ingredients": "정제수, 글리세린, 1,2-헥산다이올, 폴리글리세릴-10라우레이트, 폴리글리세릴-4라이레이트, 카보머, 하이드록시에틸셀룰로오스, 판테놀, 트로메타민,카프릴릴글라이콜,에틸헥실글리세린, 알란토인, 잔탄검, 글루코노락톤",
-  "caution": "1. 화장품 사용시 또는 사용 후 직사광선에 의하여 사용 부위가 붉은 반점, 부어오름 또는 가려움증 등의 이상 증상이나 부작용이 있는 경우 전문의 등과 상담할 것2. 상처가 있는 부위 등에는 사용을 자제할 것3. 보관 및 취급시의 주의사항가) 어린이의 손이 닿지 않는 곳에 보관할 것나) 직사광산을 피해서 보관할 것"
-}
+{"image_url":"https://image.oliveyoung.co.kr/uploads/images/goods/400/10/0000/0014/A00000014527303ko.jpg?l=ko","usage":"물기 없는 손으로 적당량을 덜어 메이크업 등을 지운 뒤 물로 헹구어 줍니다.","origin":"대한민국","link":"https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000145273&dispCatNo=1000001001000010001&trackingCd&curation&egcode&rccode&egrankcode","expiration_date":"개봉 전 30개월, 개봉 후 12개월","site_category":"1000001001000010001","volume":"200ml","site":1,"price":"23000","name":"닥터디퍼런트 퍼스트클렌저 200ml","site_id":"A000000145273","ingredients":"정제수, 글리세린, 1,2-헥산다이올, 폴리글리세릴-10라우레이트, 폴리글리세릴-4라이레이트, 카보머, 하이드록시에틸셀룰로오스, 판테놀, 트로메타민,카프릴릴글라이콜,에틸헥실글리세린, 알란토인, 잔탄검, 글루코노락톤","id":"f5250a8c-bfe0-49e0-8798-77ea4186bdaf","category":"4","brand":"닥터디퍼런트","caution":"1. 화장품 사용시 또는 사용 후 직사광선에 의하여 사용 부위가 붉은 반점, 부어오름 또는 가려움증 등의 이상 증상이나 부작용이 있는 경우 전문의 등과 상담할 것2. 상처가 있는 부위 등에는 사용을 자제할 것3. 보관 및 취급시의 주의사항가) 어린이의 손이 닿지 않는 곳에 보관할 것나) 직사광산을 피해서 보관할 것"}

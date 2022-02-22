@@ -1,18 +1,1 @@
-{
-  "id": "4eccffb9-7b5f-4341-99c9-4ac91f3b8e7c",
-  "name": "아워글래스 1.5MM 젤 라이너",
-  "price": "26000",
-  "brand": "아워글래스",
-  "category": "8",
-  "site": 1,
-  "site_id": "A000000158741",
-  "site_category": "1000001000200070002",
-  "link": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000158741&dispCatNo=1000001000200070002&trackingCd&curation&egcode&rccode&egrankcode",
-  "image_url": "https://image.oliveyoung.co.kr/uploads/images/goods/400/10/0000/0015/A00000015874101ko.jpg?l=ko",
-  "volume": "0.6g",
-  "expiration_date": "대부분 사용기한 10개월 이상 남은 상품을 발송해 드립니다.",
-  "usage": "제품의 중앙을 잡고 아래를 돌리면 클릭 소리와 함께 메케니컬 펜슬이 나옵니다. 두 번 클릭 후 점막을 채우듯 부드럽게 라인을 그려 줍니다.",
-  "origin": "일본",
-  "ingredients": "메틸트라이메티콘, 트라이메틸실록시실리케이트, 폴리에틸렌, 세레신, 마이크로크리스탈린왁스, 카나우바왁스, 다이펜타에리스리틸헥사하이드록시스테아레이트/헥사스테아레이트/헥사로지네이트, 프로필파라벤, 토코페롤, 트라이에틸헥사노인",
-  "caution": "1) 화장품 사용 시 또는 사용 후 직사광선에 의하여 사용부위가 붉은 반점, 부어오름 또는 가려움증 등의 이상 증상이나 부작용이 있는 경우 전문의 등과 상담할 것 2) 상처가 있는 부위 등에는 사용을 자제할 것 3) 보관 및 취급 시의 주의사항 가) 어린이의 손이 닿지 않는 곳에 보관할 것 나) 직사광선을 피해서 보관할 것"
-}
+{"image_url":"https://image.oliveyoung.co.kr/uploads/images/goods/400/10/0000/0015/A00000015874101ko.jpg?l=ko","usage":"제품의 중앙을 잡고 아래를 돌리면 클릭 소리와 함께 메케니컬 펜슬이 나옵니다. 두 번 클릭 후 점막을 채우듯 부드럽게 라인을 그려 줍니다.","origin":"일본","link":"https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000158741&dispCatNo=1000001000200070002&trackingCd&curation&egcode&rccode&egrankcode","expiration_date":"대부분 사용기한 10개월 이상 남은 상품을 발송해 드립니다.","site_category":"1000001000200070002","volume":"0.6g","site":1,"price":"26000","name":"아워글래스 1.5MM 젤 라이너","site_id":"A000000158741","ingredients":"메틸트라이메티콘, 트라이메틸실록시실리케이트, 폴리에틸렌, 세레신, 마이크로크리스탈린왁스, 카나우바왁스, 다이펜타에리스리틸헥사하이드록시스테아레이트/헥사스테아레이트/헥사로지네이트, 프로필파라벤, 토코페롤, 트라이에틸헥사노인","id":"4eccffb9-7b5f-4341-99c9-4ac91f3b8e7c","category":"8","brand":"아워글래스","caution":"1) 화장품 사용 시 또는 사용 후 직사광선에 의하여 사용부위가 붉은 반점, 부어오름 또는 가려움증 등의 이상 증상이나 부작용이 있는 경우 전문의 등과 상담할 것 2) 상처가 있는 부위 등에는 사용을 자제할 것 3) 보관 및 취급 시의 주의사항 가) 어린이의 손이 닿지 않는 곳에 보관할 것 나) 직사광선을 피해서 보관할 것"}

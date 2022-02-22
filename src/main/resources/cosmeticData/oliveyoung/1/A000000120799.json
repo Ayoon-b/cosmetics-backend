@@ -1,18 +1,1 @@
-{
-  "id": "a9fd50cf-1977-495b-980b-3e089201e12d",
-  "name": "엠브리올리스 레 크렘 플루이드 500ml",
-  "price": "39000",
-  "brand": "엠브리올리스",
-  "category": "1",
-  "site": 1,
-  "site_id": "A000000120799",
-  "site_category": "100000100010008",
-  "link": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000120799&dispCatNo=100000100010008&trackingCd&curation&egcode&rccode&egrankcode",
-  "image_url": "https://image.oliveyoung.co.kr/uploads/images/goods/400/10/0000/0012/A00000012079902ko.jpg?l=ko",
-  "volume": "500ml",
-  "expiration_date": "제조일로부터 4년, 개봉 후 12개월",
-  "usage": "세안 및 샤워 후, 적당량을 덜어 얼굴과 몸에 부드럽게 마사지하듯 발라줍니다. ",
-  "origin": "프랑스",
-  "ingredients": "정제수, 미네랄오일, 스테아릭애씨드, 팔미틱애씨드, 글리세릴스테아레이트에스이, 트라이에탄올아민, 시어버터, 세틸팔미테이트, 1,2-헥산다이올, 카프릴릴글라이콜, 스테아레스-10, 비즈왁스, 폴리아크릴아마이드, C13-14아이소파라핀, 향료, 라우레스-7, 프로필렌글라이콜, 트로폴론, 하이드롤라이즈드콩단백질, 알로에베라잎추출물 ",
-  "caution": "1) 화장품 사용 시 또는 사용 후 직사광선에 의하여 사용부위가 붉은 반점, 부어오름 또는 가려움증 등의 이상 증상이나 부작용이 있는 경우 전문의 등과 상담할 것 2) 상처가 있는 부위 등에는 사용을 자제할 것 3) 보관 및 취급 시의 주의사항 가) 어린이의 손이 닿지 않는 곳에 보관할 것 나) 직사광선을 피해서 보관할 것 "
-}
+{"image_url":"https://image.oliveyoung.co.kr/uploads/images/goods/400/10/0000/0012/A00000012079902ko.jpg?l=ko","usage":"세안 및 샤워 후, 적당량을 덜어 얼굴과 몸에 부드럽게 마사지하듯 발라줍니다. ","origin":"프랑스","link":"https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000120799&dispCatNo=100000100010008&trackingCd&curation&egcode&rccode&egrankcode","expiration_date":"제조일로부터 4년, 개봉 후 12개월","site_category":"100000100010008","volume":"500ml","site":1,"price":"39000","name":"엠브리올리스 레 크렘 플루이드 500ml","site_id":"A000000120799","ingredients":"정제수, 미네랄오일, 스테아릭애씨드, 팔미틱애씨드, 글리세릴스테아레이트에스이, 트라이에탄올아민, 시어버터, 세틸팔미테이트, 1,2-헥산다이올, 카프릴릴글라이콜, 스테아레스-10, 비즈왁스, 폴리아크릴아마이드, C13-14아이소파라핀, 향료, 라우레스-7, 프로필렌글라이콜, 트로폴론, 하이드롤라이즈드콩단백질, 알로에베라잎추출물 ","id":"a9fd50cf-1977-495b-980b-3e089201e12d","category":"1","brand":"엠브리올리스","caution":"1) 화장품 사용 시 또는 사용 후 직사광선에 의하여 사용부위가 붉은 반점, 부어오름 또는 가려움증 등의 이상 증상이나 부작용이 있는 경우 전문의 등과 상담할 것 2) 상처가 있는 부위 등에는 사용을 자제할 것 3) 보관 및 취급 시의 주의사항 가) 어린이의 손이 닿지 않는 곳에 보관할 것 나) 직사광선을 피해서 보관할 것 "}

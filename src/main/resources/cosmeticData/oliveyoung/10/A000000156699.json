@@ -1,18 +1,1 @@
-{
-  "id": "e27a96bc-0917-4ddf-8c44-54f633de96b2",
-  "name": "포뷰트 엠스프레이 150ml 1+1기획세트",
-  "price": "12800",
-  "brand": "포뷰트",
-  "category": "10",
-  "site": 1,
-  "site_id": "A000000156699",
-  "site_category": "1000001000400130001",
-  "link": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000156699&dispCatNo=1000001000400130001&trackingCd&curation&egcode&rccode&egrankcode",
-  "image_url": "https://image.oliveyoung.co.kr/uploads/images/goods/400/10/0000/0015/A00000015669901ko.jpg?l=ko",
-  "volume": "150ml",
-  "expiration_date": "1년",
-  "usage": "모발 손질 후 적당량을 모발에 스프레이 하고 스타일을 마무리합니다.",
-  "origin": "대한민국",
-  "ingredients": "정제수, 에탄올, 아미노메칠프로판올, 바테만, 피이지-12디메치콘, 하이드롤라이즈드실크, 아크릴레이트/옥틸아크릴아마이드코폴리머, 판테놀,향료",
-  "caution": "1. 화장품 사용 시 또는 사용 후 직사광선에 의하여 사용 부위가 붉은 반점, 부어오름 또는 가려움증 등의 이상 증상이나 부작용이 있는 경우 전문의 등과 상담할 것2. 상처가 있는 부위 등에는 사용을 자제할 것3. 눈에 들어갔을 때에는 즉시 씻어낼 것4. 보관 및 취급 시의 주의사항 가. 어린이의 손이 닿지 않는 곳에 보관할 것 나. 직사광선을 피해서 보관할 것 "
-}
+{"image_url":"https://image.oliveyoung.co.kr/uploads/images/goods/400/10/0000/0015/A00000015669901ko.jpg?l=ko","usage":"모발 손질 후 적당량을 모발에 스프레이 하고 스타일을 마무리합니다.","origin":"대한민국","link":"https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000156699&dispCatNo=1000001000400130001&trackingCd&curation&egcode&rccode&egrankcode","expiration_date":"1년","site_category":"1000001000400130001","volume":"150ml","site":1,"price":"12800","name":"포뷰트 엠스프레이 150ml 1+1기획세트","site_id":"A000000156699","ingredients":"정제수, 에탄올, 아미노메칠프로판올, 바테만, 피이지-12디메치콘, 하이드롤라이즈드실크, 아크릴레이트/옥틸아크릴아마이드코폴리머, 판테놀,향료","id":"e27a96bc-0917-4ddf-8c44-54f633de96b2","category":"10","brand":"포뷰트","caution":"1. 화장품 사용 시 또는 사용 후 직사광선에 의하여 사용 부위가 붉은 반점, 부어오름 또는 가려움증 등의 이상 증상이나 부작용이 있는 경우 전문의 등과 상담할 것2. 상처가 있는 부위 등에는 사용을 자제할 것3. 눈에 들어갔을 때에는 즉시 씻어낼 것4. 보관 및 취급 시의 주의사항 가. 어린이의 손이 닿지 않는 곳에 보관할 것 나. 직사광선을 피해서 보관할 것 "}
