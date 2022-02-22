@@ -1,5 +1,7 @@
 package com.teamtbd.cosmetics.product.service;
 
+import com.teamtbd.cosmetics.domain.Category;
+import com.teamtbd.cosmetics.domain.Site;
 import com.teamtbd.cosmetics.product.Product;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -7,7 +9,10 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.test.context.web.WebAppConfiguration;
 
 import java.io.IOException;
 import java.util.List;
@@ -15,6 +20,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest
+@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 class ProductServiceTest {
 
 	@Autowired
@@ -152,4 +158,78 @@ class ProductServiceTest {
 		System.out.println("products = " + products);
 	}
 
+    @Test
+    void saveProductsFromPathsTest() throws IOException, ParseException{
+        productService.saveProductsFromPaths(productService.getFileList("src/main/resources/cosmeticData"));
+    }
+
+    @Test
+    void getFileListTest() throws IOException {
+        System.out.println("productService = " + productService.getFileList("src/main/resources/cosmeticData"));
+    }
+
+    @Test
+    void getProductsByCategoryTest() {
+        System.out.println(productService.getProductsByCategory(Category.EYE_LINER));
+    }
+
+    @Test
+    void getProductsBySiteTest() {
+        System.out.println(productService.getProductsBySite(Site.INNISFREE));
+    }
+
+    @Test
+    void getProductsByNameContainsTest() {
+        System.out.println(productService.getProductsByNameContains("미샤"));
+    }
+
+    @Test
+    void getProductsByCategoryWithPageRequestTest() {
+        System.out.println(productService.getProductsByCategory(Category.EYE_LINER, PageRequest.of(0,24)));
+    }
+
+    @Test
+    void getProductsByNameContainsWithPageRequestTest() {
+        System.out.println(productService.getProductsByNameContains("미샤", PageRequest.of(0,24)));
+    }
+
+    @Test
+    void getProductsBySiteWithPageRequestTest() {
+        System.out.println(productService.getProductsBySite(Site.NATURE_REPUBLIC, PageRequest.of(0,24)));
+    }
+
+    @Test
+    void getAllBrandsTest() {
+        System.out.println(productService.getAllBrands());
+    }
+
+    @Test
+    void getProductsByBrandTest() {
+        System.out.println(productService.getProductsByBrand("아이오페"));
+    }
+
+    @Test
+    void getProductsByPriceRangeTest() {
+        System.out.println(productService.getProductsByPriceRange(0,10000));
+    }
+
+    @Test
+    void getProductsByIngredientsContainsTest() {
+        System.out.println(productService.getProductsByIngredientsContains("오일"));
+    }
+
+    @Test
+    void getProductsByPriceAscTest() {
+        System.out.println(productService.getProductsByPriceAsc());
+    }
+
+    @Test
+    void getProductsByPriceDescTest() {
+        System.out.println(productService.getProductsByPriceDesc());
+    }
+
+	@Test
+	void getProductTest() {
+		System.out.println(productService.getProduct("0de49c93-353e-4d37-ba28-42738a0d0943"));
+	}
 }
