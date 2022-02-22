@@ -20,6 +20,7 @@ import java.io.*;
 import java.nio.file.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -148,5 +149,8 @@ public class ProductService {
         return productRepository.findByCategoryAndNameContains(category, name, pageable);
     }
 
+    public Optional<Product> getProduct(String id) {
+        return productRepository.findById(id);
+    }
 
 }
