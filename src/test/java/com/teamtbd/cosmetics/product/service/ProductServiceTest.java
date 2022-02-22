@@ -152,7 +152,4 @@ class ProductServiceTest {
 		System.out.println("products = " + products);
 	}
 
-	@Test
-	void JsonFileReadTest() throws IOException, ParseException {
-	}
 }
