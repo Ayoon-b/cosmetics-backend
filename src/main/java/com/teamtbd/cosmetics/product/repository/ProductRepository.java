@@ -9,6 +9,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface ProductRepository extends JpaRepository<Product, String> {
 
@@ -31,4 +32,6 @@ public interface ProductRepository extends JpaRepository<Product, String> {
     List<Product> findByIngredientsContains(String ingredients);
 
     Page<Product> findByCategoryAndNameContains(Category category, String name, Pageable pageable);
+
+    Optional<Product> findById(String id);
 }
