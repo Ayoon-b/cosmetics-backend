@@ -2,9 +2,7 @@ package com.teamtbd.cosmetics.review;
 
 import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Builder
@@ -16,7 +14,8 @@ import javax.persistence.Id;
 //상품명, 쓴사람id , 별점, 리뷰제목, 리뷰내용, 사진
 public class Review {
     @Id
-    private String id; //리뷰만의 고유id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id; //리뷰만의 고유id
 
     @Column
     private String title;
