@@ -1,6 +1,6 @@
+
 logging:
   level:
-    org:
       hibernate:
         SQL: DEBUG
         type:
@@ -9,10 +9,10 @@ logging:
               BasicBinder: TRACE
 spring:
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/cosmetics?serverTimezone=Asia/Seoul
     username: root
-    password: 1234
+    password: A520602bc@
   devtools:
     livereload:
       enabled: true

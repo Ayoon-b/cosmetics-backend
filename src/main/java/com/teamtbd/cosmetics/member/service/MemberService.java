@@ -3,6 +3,7 @@ package com.teamtbd.cosmetics.member.service;
 import com.teamtbd.cosmetics.member.Member;
 import com.teamtbd.cosmetics.member.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -12,6 +13,7 @@ import java.util.Optional;
 
 @RequiredArgsConstructor
 @Transactional //데이터베이스의 상태를 변경, 한번에 수행되어야하는 연산
+
 @Service
 public class MemberService {
     private final MemberRepository memberRepository ;
