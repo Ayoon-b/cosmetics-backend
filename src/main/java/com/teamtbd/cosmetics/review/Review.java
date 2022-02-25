@@ -18,9 +18,12 @@ public class Review {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id; //리뷰만의 고유id
 
+    @Column
     private Long reviewerId;
 
-    private Product product;
+    @Column
+    private Long productId;
+
     @Column
     private String title;
 
@@ -28,8 +31,8 @@ public class Review {
     private String review;
 
     @Column
+    @Enumerated(EnumType.STRING)
     private Rating rating;
-
     //이미지 어캐넣을건지 고민
 
 }
