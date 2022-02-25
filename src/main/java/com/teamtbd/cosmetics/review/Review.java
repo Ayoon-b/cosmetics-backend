@@ -1,5 +1,7 @@
 package com.teamtbd.cosmetics.review;
 
+import com.teamtbd.cosmetics.member.Member;
+import com.teamtbd.cosmetics.product.Product;
 import lombok.*;
 import org.springframework.boot.autoconfigure.kafka.KafkaProperties;
 
@@ -18,9 +20,17 @@ public class Review {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id; //리뷰만의 고유id
 
+    @Column
     private Long reviewerId;
 
+    @ManyToOne
+    @JoinColumn(name = "ProductId")
     private Product product;
+
+    @ManyToOne
+    @JoinColumn(name = "memberId")
+    private Member member;
+
     @Column
     private String title;
 
@@ -28,6 +38,7 @@ public class Review {
     private String review;
 
     @Column
+    @Enumerated(EnumType.STRING)
     private Rating rating;
 
     //이미지 어캐넣을건지 고민
