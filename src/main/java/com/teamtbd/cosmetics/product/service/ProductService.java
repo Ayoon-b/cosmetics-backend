@@ -3,6 +3,7 @@ package com.teamtbd.cosmetics.product.service;
 import com.teamtbd.cosmetics.domain.Category;
 import com.teamtbd.cosmetics.domain.Site;
 import com.teamtbd.cosmetics.product.Product;
+import com.teamtbd.cosmetics.product.controller.Filter;
 import com.teamtbd.cosmetics.product.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import org.json.simple.JSONArray;
@@ -137,8 +138,8 @@ public class ProductService {
 		return productRepository.findByPriceBetween(minPrice, maxPrice);
 	}
 
-	public List<Product> getProductsByIngredientsContains(String ingredients) {
-		return productRepository.findByIngredientsContains(ingredients);
+	public Page<Product> getProductsByIngredientsContains(String ingredients, Pageable pageable) {
+		return productRepository.findByIngredientsContains(ingredients, pageable);
 	}
 
 	public Page<Product> getProductsByPriceAsc() {
@@ -157,4 +158,47 @@ public class ProductService {
 		return productRepository.findById(id);
 	}
 
+	public Page<Product> getProductsByOrigin(String origin, Pageable pageable){
+		return productRepository.findByOrigin(origin, pageable);
+	}
+
+	public Page<Product> getProductsByVolume(String volume, Pageable pageable){
+		return productRepository.findByVolume(volume, pageable);
+	}
+
+	public Page<Product> getProductsByFilter(Filter filter, String keyword, Pageable pageable){
+		if(filter == Filter.NAME){
+			return productRepository.findByNameContains(keyword, pageable);
+		}
+		else if(filter == Filter.BRAND){
+			return productRepository.findByBrand(keyword, pageable);
+		}
+		else if(filter == Filter.INGREDIENTS){
+			return productRepository.findByIngredientsContains(keyword, pageable);
+		}
+		else if(filter == Filter.ORIGIN){
+			return productRepository.findByOrigin(keyword, pageable);
+		}
+		else{
+			throw new IllegalArgumentException("지원하지 않는 필터입니다.");
+		}
+	}
+
+	public Page<Product> getProductsByFilterAndCategory(Filter filter, String keyword, Category category, Pageable pageable){
+		if(filter == Filter.NAME){
+			return productRepository.findByCategoryAndNameContains(category, keyword, pageable);
+		}
+		else if(filter == Filter.BRAND){
+			return productRepository.findByCategoryAndBrand(category,keyword, pageable);
+		}
+		else if(filter == Filter.INGREDIENTS){
+			return productRepository.findByCategoryAndIngredientsContains(category,keyword, pageable);
+		}
+		else if(filter == Filter.ORIGIN){
+			return productRepository.findByCategoryAndOrigin(category,keyword, pageable);
+		}
+		else{
+			throw new IllegalArgumentException("지원하지 않는 필터입니다.");
+		}
+	}
 }
