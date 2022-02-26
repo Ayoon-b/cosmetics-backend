@@ -1,7 +1,7 @@
 package com.teamtbd.cosmetics.config;
 
 import com.teamtbd.cosmetics.service.CustomOAuth2UserService;
-import com.teamtbd.cosmetics.web.CustomOAuth2Provider;
+import com.teamtbd.cosmetics.config.CustomOAuth2Provider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.security.oauth2.client.OAuth2ClientProperties;
@@ -17,7 +17,7 @@ import org.springframework.security.web.authentication.LoginUrlAuthenticationEnt
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
-import static com.teamtbd.cosmetics.web.SocialType.*;
+import static com.teamtbd.cosmetics.config.SocialType.*;
 
 @Configuration
 @EnableWebSecurity
