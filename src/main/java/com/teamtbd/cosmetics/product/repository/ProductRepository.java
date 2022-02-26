@@ -33,5 +33,4 @@ public interface ProductRepository extends JpaRepository<Product, String> {
 
     Page<Product> findByCategoryAndNameContains(Category category, String name, Pageable pageable);
 
-    Optional<Product> findById(String id);
 }
