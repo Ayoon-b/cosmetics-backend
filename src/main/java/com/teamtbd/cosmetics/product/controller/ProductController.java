@@ -22,21 +22,25 @@ public class ProductController {
                                      @RequestParam(value = "category_id", required = false) Integer categoryId,
                                      @RequestParam(value = "search", required = false) String search,
                                      @RequestParam(value = "sortBy", defaultValue = "price") String sortBy,
-                                     @RequestParam(value = "orderBy", defaultValue = "asc") String orderBy){
+                                     @RequestParam(value = "orderBy", defaultValue = "asc") String orderBy,
+                                     @RequestParam(value = "filterBy", defaultValue = "NAME") String filterBy){
+
         Sort sort = Sort.by(orderBy.equalsIgnoreCase("desc")
                 ? Sort.Order.desc(sortBy)
                 : Sort.Order.asc(sortBy));
         PageRequest pageable = PageRequest.of(page, 24, sort);
 
+        Filter filter = Filter.valueOf(filterBy.toUpperCase());
+
         if (categoryId != null) {
             Category category = Category.valueOf(categoryId);
             if (search != null) {
-                return productService.getProductsByCategoryAndName(category, search, pageable);
+                return productService.getProductsByFilterAndCategory(filter, search, category, pageable);
             }
             return productService.getProductsByCategory(category, pageable);
         }
         if (search != null) {
-            return productService.getProductsByNameContains(search, pageable);
+            return productService.getProductsByFilter(filter, search, pageable);
         }
         return productService.getProducts(pageable);
     }
