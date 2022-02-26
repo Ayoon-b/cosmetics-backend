@@ -26,11 +26,22 @@ public interface ProductRepository extends JpaRepository<Product, String> {
     List<String> findAllBrands();
 
     List<Product> findByBrand(String brand);
+    Page<Product> findByBrand(String brand, Pageable pageable);
 
     List<Product> findByPriceBetween(Integer minPrice, Integer maxPrice);
 
     List<Product> findByIngredientsContains(String ingredients);
+    Page<Product> findByIngredientsContains(String ingredients, Pageable pageable);
+
+    Page<Product> findByOrigin(String origin, Pageable pageable);
+
+    Page<Product> findByVolume(String volume, Pageable pageable);
 
     Page<Product> findByCategoryAndNameContains(Category category, String name, Pageable pageable);
 
+    Page<Product> findByCategoryAndBrand(Category category, String keyword, Pageable pageable);
+
+    Page<Product> findByCategoryAndIngredientsContains(Category category, String keyword, Pageable pageable);
+
+    Page<Product> findByCategoryAndOrigin(Category category, String keyword, Pageable pageable);
 }
