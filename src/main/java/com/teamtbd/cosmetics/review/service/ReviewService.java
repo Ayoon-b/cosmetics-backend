@@ -20,4 +20,20 @@ public class ReviewService {
         Review review1=reviewRepository.save(review);
         return review1;
     }
+    //리뷰 수정 
+    public Optional<Review> updateReview(Long id, Review review){
+        Optional<Review> updateReview = reviewRepository.findById(id);
+        //바꿀수없는것 id,join date
+        updateReview.ifPresent(selectReview->{
+            if(review.getTitle()!=null)
+                selectReview.setTitle(review.getTitle());
+            if(review.getReview()!=null)
+                selectReview.setReview(review.getReview());
+            if(review.getRating()!=null)
+                selectReview.setRating(review.getRating());
+
+            reviewRepository.save(selectReview);
+        });
+        return updateReview;
+    }
 }
