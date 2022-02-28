@@ -15,4 +15,9 @@ public class ReviewService {
     //상품별 별점 계산
     //내가 작성한 후기 목록 보기
 
+    //리뷰 저장
+    public Review saveReview(Review review){
+        Review review1=reviewRepository.save(review);
+        return review1;
+    }
 }
