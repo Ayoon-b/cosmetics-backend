@@ -1,6 +1,8 @@
 package com.teamtbd.cosmetics.review.service;
 
 import com.teamtbd.cosmetics.member.Member;
+import com.teamtbd.cosmetics.product.Product;
+import com.teamtbd.cosmetics.product.repository.ProductRepository;
 import com.teamtbd.cosmetics.review.Review;
 import com.teamtbd.cosmetics.review.repository.ReviewRepository;
 import lombok.RequiredArgsConstructor;
@@ -21,9 +23,21 @@ public class ReviewService {
     //내가 작성한 후기 목록 보기
 
     private ReviewRepository reviewRepository;
+    private ProductRepository productRepository;
 
-    //리뷰 저장
+    //리뷰 저장 -> 이때마다 상품 별 별점 계산
     public Review save(Review review){
+        Product product=review.getProduct();
+
+        //리뷰 개수 갱신
+        int beforeReviewCount =product.getReviewCount();
+        product.setReviewCount(beforeReviewCount+1);
+
+        //누적 별점 갱신
+        float beforeUpdateStar=product.getRating();
+        float afterUpdateStar=(beforeUpdateStar+review.getRating())/(beforeReviewCount+1);
+        product.setRating(afterUpdateStar);
+
         return reviewRepository.save(review);
     }
 
@@ -36,8 +50,8 @@ public class ReviewService {
                 selectReview.setTitle(review.getTitle());
             if(review.getBody()!=null)
                 selectReview.setBody(review.getBody());
-            if(review.getRating()!=null)
-                selectReview.setRating(review.getRating());
+            //if(review.getRating()==null)
+            selectReview.setRating(review.getRating());
 
             reviewRepository.save(selectReview);
         });
