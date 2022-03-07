@@ -1,5 +1,6 @@
 package com.teamtbd.cosmetics.review;
 
+import com.sun.istack.NotNull;
 import com.teamtbd.cosmetics.member.Member;
 import com.teamtbd.cosmetics.product.Product;
 import lombok.*;
@@ -36,7 +37,8 @@ public class Review {
     private String body;
 
     @Column //예외처리를 service나 controller에서 해주기
-    private Integer rating;
+    //@NotBlank
+    private float rating;
     //이미지 어캐넣을건지 고민
 
 }
