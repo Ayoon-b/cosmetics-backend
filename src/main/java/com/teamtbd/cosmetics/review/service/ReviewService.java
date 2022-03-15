@@ -57,4 +57,20 @@ public class ReviewService {
         });
         return updateReview;
     }
+
+    //리뷰 삭제
+    public void delete(Review review){
+        Product product=review.getProduct();
+
+        //리뷰 개수 갱신
+        int beforeReviewCount =product.getReviewCount();
+        product.setReviewCount(beforeReviewCount-1);
+
+        //누적 별점 갱신
+        int beforeUpdateStar=product.getTotalRating();
+        int afterUpdateStar=beforeUpdateStar-review.getRating();
+        product.setTotalRating(afterUpdateStar);
+
+        reviewRepository.delete(review);
+    }
 }
