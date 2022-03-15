@@ -38,7 +38,7 @@ public class Review {
 
     @Column //예외처리를 service나 controller에서 해주기
     //@NotBlank
-    private float rating;
+    private Integer rating;
     //이미지 어캐넣을건지 고민
 
 }
