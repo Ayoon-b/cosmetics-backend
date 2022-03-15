@@ -71,10 +71,10 @@ public class Product {
 	private String imageUrl;
 
 	@Column
-	private int reviewCount;
+	private Integer reviewCount;
 
 	@Column
-	private float rating;
+	private Integer totalRating;
 
 	@PrePersist
 	public void prePersist() {
