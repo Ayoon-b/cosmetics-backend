@@ -34,9 +34,9 @@ public class ReviewService {
         product.setReviewCount(beforeReviewCount+1);
 
         //누적 별점 갱신
-        float beforeUpdateStar=product.getRating();
-        float afterUpdateStar=(beforeUpdateStar+review.getRating())/(beforeReviewCount+1);
-        product.setRating(afterUpdateStar);
+        int beforeUpdateStar=product.getTotalRating();
+        int afterUpdateStar=beforeUpdateStar+review.getRating();
+        product.setTotalRating(afterUpdateStar);
 
         return reviewRepository.save(review);
     }
@@ -50,7 +50,7 @@ public class ReviewService {
                 selectReview.setTitle(review.getTitle());
             if(review.getBody()!=null)
                 selectReview.setBody(review.getBody());
-            //if(review.getRating()==null)
+            if(review.getRating()!=null)
             selectReview.setRating(review.getRating());
 
             reviewRepository.save(selectReview);
