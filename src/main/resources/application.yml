@@ -16,7 +16,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/cosmetics?serverTimezone=Asia/Seoul
     username: root
-    password: A520602bc@
+    password: 1234
   devtools:
     livereload:
       enabled: true
@@ -41,3 +41,10 @@ spring:
     enabled: true
     prefix: classpath:/templates/
     suffix: .html
+  springdoc:
+    default-consumes-media-type: application/json
+    default-produces-media-type: application/json
+    swagger-ui:
+      path: /swagger-ui.html
+      disable-swagger-default-url: true
+      display-query-params-without-oauth2: true
