@@ -2,6 +2,7 @@ package com.teamtbd.cosmetics.product.controller;
 
 import com.teamtbd.cosmetics.domain.Category;
 import com.teamtbd.cosmetics.product.Product;
+import com.teamtbd.cosmetics.product.dto.ProductDto;
 import com.teamtbd.cosmetics.product.service.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -18,12 +19,12 @@ public class ProductController {
     private final ProductService productService;
 
     @GetMapping(path = "/products")
-    public Page<Product> getProducts(@RequestParam(defaultValue = "0") Integer page,
-                                     @RequestParam(value = "category_id", required = false) Integer categoryId,
-                                     @RequestParam(value = "search", required = false) String search,
-                                     @RequestParam(value = "sortBy", defaultValue = "price") String sortBy,
-                                     @RequestParam(value = "orderBy", defaultValue = "asc") String orderBy,
-                                     @RequestParam(value = "filterBy", defaultValue = "NAME") String filterBy){
+    public Page<ProductDto> getProducts(@RequestParam(defaultValue = "0") Integer page,
+                                        @RequestParam(value = "category_id", required = false) Integer categoryId,
+                                        @RequestParam(value = "search", required = false) String search,
+                                        @RequestParam(value = "sortBy", defaultValue = "price") String sortBy,
+                                        @RequestParam(value = "orderBy", defaultValue = "asc") String orderBy,
+                                        @RequestParam(value = "filterBy", defaultValue = "NAME") String filterBy){
 
         Sort sort = Sort.by(orderBy.equalsIgnoreCase("desc")
                 ? Sort.Order.desc(sortBy)
