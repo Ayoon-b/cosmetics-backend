@@ -4,6 +4,7 @@ import com.teamtbd.cosmetics.domain.Category;
 import com.teamtbd.cosmetics.domain.Site;
 import com.teamtbd.cosmetics.product.Product;
 import com.teamtbd.cosmetics.product.controller.Filter;
+import com.teamtbd.cosmetics.product.dto.ProductDto;
 import com.teamtbd.cosmetics.product.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import org.json.simple.JSONArray;
@@ -110,11 +111,11 @@ public class ProductService {
 		return productRepository.findBySite(site);
 	}
 
-	public Page<Product> getProductsByCategory(Category category, Pageable pageable) {
+	public Page<ProductDto> getProductsByCategory(Category category, Pageable pageable) {
 		return productRepository.findByCategory(category, pageable);
 	}
 
-	public Page<Product> getProductsByNameContains(String name, Pageable pageable) {
+	public Page<ProductDto> getProductsByNameContains(String name, Pageable pageable) {
 		return productRepository.findByNameContains(name, pageable);
 	}
 
@@ -126,8 +127,8 @@ public class ProductService {
 		return productRepository.findAllBrands();
 	}
 
-	public Page<Product> getProducts(PageRequest pageable) {
-		return productRepository.findAll(pageable);
+	public Page<ProductDto> getProducts(PageRequest pageable) {
+		return productRepository.selectAll(pageable);
 	}
 
 	public List<Product> getProductsByBrand(String brand) {
@@ -138,7 +139,7 @@ public class ProductService {
 		return productRepository.findByPriceBetween(minPrice, maxPrice);
 	}
 
-	public Page<Product> getProductsByIngredientsContains(String ingredients, Pageable pageable) {
+	public Page<ProductDto> getProductsByIngredientsContains(String ingredients, Pageable pageable) {
 		return productRepository.findByIngredientsContains(ingredients, pageable);
 	}
 
@@ -150,7 +151,7 @@ public class ProductService {
 		return productRepository.findAll(PageRequest.of(0, 24, Sort.by("price").descending()));
 	}
 
-	public Page<Product> getProductsByCategoryAndName(Category category, String name, Pageable pageable) {
+	public Page<ProductDto> getProductsByCategoryAndName(Category category, String name, Pageable pageable) {
 		return productRepository.findByCategoryAndNameContains(category, name, pageable);
 	}
 
@@ -158,15 +159,15 @@ public class ProductService {
 		return productRepository.findById(id);
 	}
 
-	public Page<Product> getProductsByOrigin(String origin, Pageable pageable){
+	public Page<ProductDto> getProductsByOrigin(String origin, Pageable pageable){
 		return productRepository.findByOrigin(origin, pageable);
 	}
 
-	public Page<Product> getProductsByVolume(String volume, Pageable pageable){
+	public Page<ProductDto> getProductsByVolume(String volume, Pageable pageable){
 		return productRepository.findByVolume(volume, pageable);
 	}
 
-	public Page<Product> getProductsByFilter(Filter filter, String keyword, Pageable pageable){
+	public Page<ProductDto> getProductsByFilter(Filter filter, String keyword, Pageable pageable){
 		if(filter == Filter.NAME){
 			return productRepository.findByNameContains(keyword, pageable);
 		}
@@ -184,7 +185,7 @@ public class ProductService {
 		}
 	}
 
-	public Page<Product> getProductsByFilterAndCategory(Filter filter, String keyword, Category category, Pageable pageable){
+	public Page<ProductDto> getProductsByFilterAndCategory(Filter filter, String keyword, Category category, Pageable pageable){
 		if(filter == Filter.NAME){
 			return productRepository.findByCategoryAndNameContains(category, keyword, pageable);
 		}
