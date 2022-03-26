@@ -1,5 +1,6 @@
 package com.teamtbd.cosmetics.member;
 
+import com.teamtbd.cosmetics.config.AuthProvider;
 import com.teamtbd.cosmetics.domain.BaseTimeEntity;
 import lombok.*;
 
@@ -42,7 +43,7 @@ public class Member extends BaseTimeEntity {
 
 	@Column
 	private String joinDate;
-	
+
 	@Column
 	private String picture;
 
@@ -50,4 +51,8 @@ public class Member extends BaseTimeEntity {
 	@Column(nullable = false)
 	private Role role;  // Role: 직접 만드는 클래스
 
+	@Enumerated(EnumType.STRING)
+	private AuthProvider provider;
+
+	private String providerId;
 }
