@@ -3,7 +3,6 @@ package com.teamtbd.cosmetics.product.repository;
 import com.teamtbd.cosmetics.domain.Category;
 import com.teamtbd.cosmetics.domain.Site;
 import com.teamtbd.cosmetics.product.Product;
-import com.teamtbd.cosmetics.product.dto.ProductDto;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -13,47 +12,41 @@ import java.util.List;
 
 public interface ProductRepository extends JpaRepository<Product, String> {
 
-    List<Product> findByCategory(Category category);
-    Page<ProductDto> findByCategory(Category category, Pageable pageable);
+	List<Product> findByCategory(Category category);
 
-    List<Product> findByNameContains(String name);
-    Page<ProductDto> findByNameContains(String name, Pageable pageable);
+	Page<Product> findByCategory(Category category, Pageable pageable);
 
-    List<Product> findBySite(Site site);
-    List<Product> findBySite(Site site, Pageable pageable);
+	List<Product> findByNameContains(String name);
 
-    @Query("select DISTINCT(p.brand) FROM Product p")
-    List<String> findAllBrands();
+	Page<Product> findByNameContains(String name, Pageable pageable);
 
-    List<Product> findByBrand(String brand);
-    Page<ProductDto> findByBrand(String brand, Pageable pageable);
+	List<Product> findBySite(Site site);
 
-    List<Product> findByPriceBetween(Integer minPrice, Integer maxPrice);
+	List<Product> findBySite(Site site, Pageable pageable);
 
-    List<Product> findByIngredientsContains(String ingredients);
+	@Query("select DISTINCT(p.brand) FROM Product p")
+	List<String> findAllBrands();
 
-    @Query("SELECT new com.teamtbd.cosmetics.product.dto.ProductDto(p.name, p.price, p.brand, p.imageUrl) FROM Product p")
-    Page<ProductDto> selectAll(Pageable pageable);
+	List<Product> findByBrand(String brand);
 
-    @Query("SELECT new com.teamtbd.cosmetics.product.dto.ProductDto(p.name, p.price, p.brand, p.imageUrl) FROM Product p")
-    Page<ProductDto> findByIngredientsContains(String ingredients, Pageable pageable);
+	Page<Product> findByBrand(String brand, Pageable pageable);
 
-    @Query("SELECT new com.teamtbd.cosmetics.product.dto.ProductDto(p.name, p.price, p.brand, p.imageUrl) FROM Product p")
-    Page<ProductDto> findByOrigin(String origin, Pageable pageable);
+	List<Product> findByPriceBetween(Integer minPrice, Integer maxPrice);
 
-    @Query("SELECT new com.teamtbd.cosmetics.product.dto.ProductDto(p.name, p.price, p.brand, p.imageUrl) FROM Product p")
-    Page<ProductDto> findByVolume(String volume, Pageable pageable);
+	List<Product> findByIngredientsContains(String ingredients);
+	
+	Page<Product> findByIngredientsContains(String ingredients, Pageable pageable);
 
-    @Query("SELECT new com.teamtbd.cosmetics.product.dto.ProductDto(p.name, p.price, p.brand, p.imageUrl) FROM Product p")
-    Page<ProductDto> findByCategoryAndNameContains(Category category, String name, Pageable pageable);
+	Page<Product> findByOrigin(String origin, Pageable pageable);
 
-    @Query("SELECT new com.teamtbd.cosmetics.product.dto.ProductDto(p.name, p.price, p.brand, p.imageUrl) FROM Product p")
-    Page<ProductDto> findByCategoryAndBrand(Category category, String keyword, Pageable pageable);
+	Page<Product> findByVolume(String volume, Pageable pageable);
 
-    @Query("SELECT new com.teamtbd.cosmetics.product.dto.ProductDto(p.name, p.price, p.brand, p.imageUrl) FROM Product p")
-    Page<ProductDto> findByCategoryAndIngredientsContains(Category category, String keyword, Pageable pageable);
+	Page<Product> findByCategoryAndNameContains(Category category, String name, Pageable pageable);
 
-    @Query("SELECT new com.teamtbd.cosmetics.product.dto.ProductDto(p.name, p.price, p.brand, p.imageUrl) FROM Product p")
-    Page<ProductDto> findByCategoryAndOrigin(Category category, String keyword, Pageable pageable);
+	Page<Product> findByCategoryAndBrand(Category category, String keyword, Pageable pageable);
+
+	Page<Product> findByCategoryAndIngredientsContains(Category category, String keyword, Pageable pageable);
+
+	Page<Product> findByCategoryAndOrigin(Category category, String keyword, Pageable pageable);
 
 }
