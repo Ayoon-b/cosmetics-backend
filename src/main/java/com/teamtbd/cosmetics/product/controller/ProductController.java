@@ -57,8 +57,8 @@ public class ProductController {
 		return productService.getProduct(id);
 	}
 
-	@GetMapping("/products/{ids}")
-	public List<ProductDto> getRecentProducts(@RequestParam("ids") List<String> ids){
+	@GetMapping("/products/recent")
+	public List<ProductDto> getRecentProducts(@RequestParam("ids") List<String> ids) {
 		return productService.getProductsByIds(ids).stream().map(ProductDto::from).collect(Collectors.toList());
 	}
 }
