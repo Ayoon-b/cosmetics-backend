@@ -194,4 +194,8 @@ public class ProductService {
 			throw new IllegalArgumentException("지원하지 않는 필터입니다.");
 		}
 	}
+
+	public List<Product> getProductsByIds(List<String> ids) {
+		return productRepository.findByIdIn(ids);
+	}
 }
