@@ -12,7 +12,7 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor
 //한사람의 리뷰 1개당 여러 사진첨부 가능함 1:N 관계
-public class Image extends BaseTimeEntity {
+public class Image{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
