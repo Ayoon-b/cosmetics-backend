@@ -13,7 +13,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @RestController
 @RequiredArgsConstructor
@@ -53,5 +55,10 @@ public class ProductController {
 	@GetMapping("/products/{id}")
 	public Optional<Product> getProduct(@PathVariable("id") String id) {
 		return productService.getProduct(id);
+	}
+
+	@GetMapping("/products/recent")
+	public List<ProductDto> getRecentProducts(@RequestParam("ids") List<String> ids) {
+		return productService.getProductsByIds(ids).stream().map(ProductDto::from).collect(Collectors.toList());
 	}
 }
